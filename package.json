@@ -1,7 +1,7 @@
 {
   "name": "vue-ins-progress-bar",
   "author": "meloalright",
-  "version": "1.0.7425",
+  "version": "1.0.8",
   "description": "A vue ins progress bar",
   "main": "dist/vue-ins-progress-bar.js",
   "keywords": [
