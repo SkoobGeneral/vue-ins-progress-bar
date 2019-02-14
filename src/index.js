@@ -62,9 +62,10 @@ function install (Vue, options = {}) {
             this.__killFading();
             if (this.__isFilling()) return
             this.__fillBeginning();
-            this.state.timer.fill = setTimeout(() => {
-                this.__fillFinally()
-                if (this.__isWaiting()) { this.finish() } 
+            var that = this
+            this.state.timer.fill = setTimeout(function () {
+                that.__fillFinally()
+                if (that.__isWaiting()) { that.finish() } 
             }, 500)
         },
         height (h) {
@@ -77,8 +78,9 @@ function install (Vue, options = {}) {
                 return
             }
             this.__fadeBeginning()
-            this.state.timer.fadeAway = setTimeout(() => {
-                this.__fadeFinally()
+            var that = this
+            this.state.timer.fadeAway = setTimeout(function () {
+                that.__fadeFinally()
             }, 500)
         },
         finish () {
